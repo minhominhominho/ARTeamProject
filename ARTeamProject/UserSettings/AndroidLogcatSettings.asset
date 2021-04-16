@@ -1,0 +1,263 @@
+{
+    "m_SelectedDeviceId": "R39M300B0HB",
+    "m_SelectedPackage": {
+        "deviceId": "R39M300B0HB",
+        "name": "com.DefaultCompany.ARTeamProject",
+        "processId": 16678,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "R3CN601NPNE",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 21116,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CN601NPNE",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 22328,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CN601NPNE",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 23890,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CN601NPNE",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 25351,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CN601NPNE",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 26269,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CN601NPNE",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 27922,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN601NPNE",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 28608,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 17079,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 25391,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 27004,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 29678,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 3778,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.sec.android.app.launcher",
+            "processId": 1869,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 17779,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 20231,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 21245,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 24980,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 26144,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 26739,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 30271,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 32327,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 6554,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 9031,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 12164,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 13553,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 19299,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 19629,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 20934,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 28560,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 30299,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 31772,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 32008,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 16678,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "Behavior": 0
+    },
+    "m_Filter": "",
+    "m_FilterIsRegularExpression": false,
+    "m_SymbolPaths": []
+}
