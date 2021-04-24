@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2ea01c849266f5543815d2ada556ccf5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - objectToInstantiate: {fileID: 6652736653494231848, guid: 45f03fd07d739e24282ded00edefde54, type: 3}
+  - SpawnSound: {instanceID: 0}
+  - FallingSound: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

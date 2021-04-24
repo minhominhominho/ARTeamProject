@@ -8,6 +8,8 @@ TagManager:
   - Flame
   - Light
   - Electric
+  - Parasite
+  - Clown
   layers:
   - Default
   - TransparentFX
