@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "R39M300B0HB",
+    "m_SelectedDeviceId": "R3CM70545SK",
     "m_SelectedPackage": {
-        "deviceId": "R39M300B0HB",
-        "name": "com.DefaultCompany.ARTeamProject",
-        "processId": 16678,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -204,6 +204,12 @@
             "deviceId": "R39M300B0HB",
             "name": "com.DefaultCompany.ARTeamProject",
             "processId": 16678,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CM70545SK",
+            "name": "com.instagram.android",
+            "processId": 21199,
             "exited": false
         }
     ],
