@@ -1,31 +1,13 @@
 {
-    "m_SelectedDeviceId": "R3CM70545SK",
+    "m_SelectedDeviceId": "R3CN601NPNE",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "R3CN601NPNE",
+        "name": "com.DefaultCompany.ARTeamProject",
+        "processId": 12489,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "R3CN601NPNE",
-            "name": "com.DefaultCompany.ARTeamProject",
-            "processId": 21116,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CN601NPNE",
-            "name": "com.DefaultCompany.ARTeamProject",
-            "processId": 22328,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CN601NPNE",
-            "name": "com.DefaultCompany.ARTeamProject",
-            "processId": 23890,
-            "exited": true
-        },
         {
             "deviceId": "R3CN601NPNE",
             "name": "com.DefaultCompany.ARTeamProject",
@@ -42,12 +24,30 @@
             "deviceId": "R3CN601NPNE",
             "name": "com.DefaultCompany.ARTeamProject",
             "processId": 27922,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "R3CN601NPNE",
             "name": "com.DefaultCompany.ARTeamProject",
             "processId": 28608,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CN601NPNE",
+            "name": "com.unity3d.mobileremote",
+            "processId": 4559,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CN601NPNE",
+            "name": "com.unity3d.mobileremote",
+            "processId": 12464,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN601NPNE",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 12489,
             "exited": false
         },
         {
