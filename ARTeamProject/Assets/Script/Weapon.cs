@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    private GameObject Flame, Light;
-    public GameObject Electric;
+    private GameObject Flame, Light, Electric;
     [SerializeField] private ParticleSystem m_FlameThrower, m_LightThrower;
-    public float range = 10000;
-
+    public GameObject ElectricParticle;
+    
     void Start()
     {
-        m_FlameThrower.Stop();
-        m_LightThrower.Stop();
+        // 객체들 받아오기
         Flame = GameObject.FindWithTag("Flame");
         Light = GameObject.FindWithTag("Light");
-        Electric.SetActive(false);
+        Electric = GameObject.FindWithTag("Electric");
+        // 각 무기별 총알들 파티클 잠시 꺼두기
+        m_FlameThrower.Stop();
+        m_LightThrower.Stop();
+        ElectricParticle.SetActive(false);
     }
 
     void Stop()
     {
         m_FlameThrower.Stop();
         m_LightThrower.Stop();
-        Electric.SetActive(false);
+        ElectricParticle.SetActive(false);
     }
 
     //Update is called once per frame
@@ -43,20 +45,11 @@ public class Weapon : MonoBehaviour
                 m_LightThrower.Play();
                 Invoke("Stop", 2);
             }
-            if (Electric && !Electric.activeSelf)
+            if (Electric && Electric.activeSelf)
             {
-                Electric.SetActive(true);
+                ElectricParticle.SetActive(true);
                 Invoke("Stop", 2);
             }
         }
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (hit.collider.tag == "Shootable")
-            {
-                Debug.Log("Hit the bear");
-            }
-        }
-
     }
 }

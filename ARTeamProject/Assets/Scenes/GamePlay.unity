@@ -1984,10 +1984,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b269d93544dc8f4e9cf144fae048911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Electric: {fileID: 777407200}
   m_FlameThrower: {fileID: 198637949039470118}
   m_LightThrower: {fileID: 1354223645}
-  range: 10000
+  ElectricParticle: {fileID: 777407200}
 --- !u!114 &1775241642
 MonoBehaviour:
   m_ObjectHideFlags: 0
