@@ -30,23 +30,28 @@ public class Weapon : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
         
+        // 일단 터치를 인식받는다. 
         if (Input.GetMouseButtonDown(0))
         {
+            // Flame객체가 SetActive(true)면
             if(Flame&&Flame.activeSelf)
             {
+                // Flame particle 2초간 발사
                 m_FlameThrower.Play();
                 Invoke("Stop", 2);
             }
+            // Light객체가 SetActive(true)면 
             if (Light && Light.activeSelf)
             {
+                // Light particle 2초간 발사
                 m_LightThrower.Play();
                 Invoke("Stop", 2);
             }
+            // Electric객체가 SetActive(true)면
             if (Electric && Electric.activeSelf)
             {
+                // Electric particle 2초간 발사
                 ElectricParticle.SetActive(true);
                 Invoke("Stop", 2);
             }
