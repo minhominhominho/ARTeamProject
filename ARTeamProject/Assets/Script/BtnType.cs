@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public class BtnType : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 {
+    //handle main menu button
+
     public BTNType currentType;
     public Transform buttonScale;
     Vector3 defaultSize;
@@ -11,6 +13,7 @@ public class BtnType : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     {
         defaultSize = buttonScale.localScale;
     }
+
     public void OnBtnClick()
     {
         switch (currentType)

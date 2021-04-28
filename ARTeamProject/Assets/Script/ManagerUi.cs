@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public class ManagerUi : MonoBehaviour
 {
+
     private ManagerWeaponChange mngrWeaponChange;
-    // Start is called before the first frame update
+    
     void Start()
     {
         mngrWeaponChange = GameObject.Find("Weapon").GetComponent<ManagerWeaponChange>();   

@@ -7,7 +7,8 @@ public class Weapon : MonoBehaviour
     private GameObject Flame, Light, Electric;
     [SerializeField] private ParticleSystem m_FlameThrower, m_LightThrower;
     public GameObject ElectricParticle;
-    
+    public List<AudioSource> WeaponSound;
+
     void Start()
     {
         // 객체들 받아오기
@@ -22,6 +23,9 @@ public class Weapon : MonoBehaviour
         m_FlameThrower.Stop();
         m_LightThrower.Stop();
         ElectricParticle.SetActive(false);
+
+
+        Flame.SetActive(true);
     }
 
     void Stop()
@@ -43,6 +47,7 @@ public class Weapon : MonoBehaviour
             {
                 // Flame particle 2초간 발사
                 m_FlameThrower.Play();
+                WeaponSound[0].Play();
                 Invoke("Stop", 2);
             }
             // Light객체가 SetActive(true)면 
@@ -50,6 +55,7 @@ public class Weapon : MonoBehaviour
             {
                 // Light particle 2초간 발사
                 m_LightThrower.Play();
+                WeaponSound[1].Play();
                 Invoke("Stop", 2);
             }
             // Electric객체가 SetActive(true)면
@@ -57,6 +63,7 @@ public class Weapon : MonoBehaviour
             {
                 // Electric particle 2초간 발사
                 ElectricParticle.SetActive(true);
+                WeaponSound[2].Play();
                 Invoke("Stop", 2);
             }
         }

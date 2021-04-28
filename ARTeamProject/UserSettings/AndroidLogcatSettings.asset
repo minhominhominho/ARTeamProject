@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "R3CN601NPNE",
+    "m_SelectedDeviceId": "R39M300B0HB",
     "m_SelectedPackage": {
-        "deviceId": "R3CN601NPNE",
+        "deviceId": "R39M300B0HB",
         "name": "com.DefaultCompany.ARTeamProject",
-        "processId": 16743,
+        "processId": 29014,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -216,6 +216,54 @@
             "deviceId": "R39M300B0HB",
             "name": "com.DefaultCompany.ARTeamProject",
             "processId": 16678,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 31524,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 13753,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 18631,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 21716,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 24160,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 10258,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 15742,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 29014,
             "exited": false
         },
         {
