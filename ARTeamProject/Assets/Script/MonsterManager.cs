@@ -56,7 +56,7 @@ public class MonsterManager : MonoBehaviour
                 spawned = Instantiate(objectToInstantiate, selectedPlane.transform.position, selectedPlane.transform.rotation);
                 isSpawned = true;
                 SpawnSound.Play();
-
+               
                 waitingTime = Random.Range(8.0f, 12.0f);
             }
         }

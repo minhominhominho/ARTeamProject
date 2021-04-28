@@ -14,6 +14,10 @@ public class Weapon : MonoBehaviour
         Flame = GameObject.FindWithTag("Flame");
         Light = GameObject.FindWithTag("Light");
         Electric = GameObject.FindWithTag("Electric");
+        // 객체 SetActive(false)하기
+        Flame.SetActive(false);
+        Light.SetActive(false);
+        Electric.SetActive(false);
         // 각 무기별 총알들 파티클 잠시 꺼두기
         m_FlameThrower.Stop();
         m_LightThrower.Stop();
@@ -31,8 +35,8 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         
-        // 일단 터치를 인식받는다. 
-        if (Input.GetMouseButtonDown(0))
+        // 터치 && 파티클들이 플레이 되고 있지 않을 때 
+        if (Input.GetMouseButtonDown(0)&&!m_FlameThrower.isPlaying &&!m_LightThrower.isPlaying&&!ElectricParticle.activeSelf)
         {
             // Flame객체가 SetActive(true)면
             if(Flame&&Flame.activeSelf)

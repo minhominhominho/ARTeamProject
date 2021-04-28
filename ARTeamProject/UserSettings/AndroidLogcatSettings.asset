@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R3CN601NPNE",
         "name": "com.DefaultCompany.ARTeamProject",
-        "processId": 28815,
+        "processId": 16743,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -54,6 +54,12 @@
             "deviceId": "R3CN601NPNE",
             "name": "com.DefaultCompany.ARTeamProject",
             "processId": 28815,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN601NPNE",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 16743,
             "exited": false
         },
         {
