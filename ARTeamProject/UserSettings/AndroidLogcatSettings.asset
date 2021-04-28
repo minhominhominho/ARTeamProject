@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "R3CN601NPNE",
+    "m_SelectedDeviceId": "R3CM70545SK",
     "m_SelectedPackage": {
-        "deviceId": "R3CN601NPNE",
+        "deviceId": "R3CM70545SK",
         "name": "com.DefaultCompany.ARTeamProject",
-        "processId": 3096,
+        "processId": 23242,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -276,6 +276,18 @@
             "deviceId": "R3CM70545SK",
             "name": "com.instagram.android",
             "processId": 21199,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM70545SK",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 8657,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CM70545SK",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 23242,
             "exited": false
         }
     ],
