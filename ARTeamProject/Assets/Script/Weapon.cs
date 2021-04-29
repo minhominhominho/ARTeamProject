@@ -23,9 +23,6 @@ public class Weapon : MonoBehaviour
         m_FlameThrower.Stop();
         m_LightThrower.Stop();
         ElectricParticle.SetActive(false);
-
-
-        Flame.SetActive(true);
     }
 
     void Stop()
@@ -40,7 +37,7 @@ public class Weapon : MonoBehaviour
     {
         
         // 터치 && 파티클들이 플레이 되고 있지 않을 때 
-        if (Input.GetMouseButtonDown(0)&&!m_FlameThrower.isPlaying &&!m_LightThrower.isPlaying&&!ElectricParticle.activeSelf)
+        if (Input.GetMouseButtonUp(0)&&!m_FlameThrower.isPlaying &&!m_LightThrower.isPlaying&&!ElectricParticle.activeSelf)
         {
             // Flame객체가 SetActive(true)면
             if(Flame&&Flame.activeSelf)
