@@ -45,7 +45,7 @@ public class Weapon : MonoBehaviour
                 // Flame particle 2초간 발사
                 m_FlameThrower.Play();
                 WeaponSound[0].Play();
-                Invoke("Stop", 2);
+                Invoke("Stop", 1);
             }
             // Light객체가 SetActive(true)면 
             if (Light && Light.activeSelf)
@@ -53,7 +53,7 @@ public class Weapon : MonoBehaviour
                 // Light particle 2초간 발사
                 m_LightThrower.Play();
                 WeaponSound[1].Play();
-                Invoke("Stop", 2);
+                Invoke("Stop", 1);
             }
             // Electric객체가 SetActive(true)면
             if (Electric && Electric.activeSelf)
@@ -61,8 +61,32 @@ public class Weapon : MonoBehaviour
                 // Electric particle 2초간 발사
                 ElectricParticle.SetActive(true);
                 WeaponSound[2].Play();
-                Invoke("Stop", 2);
+                Invoke("Stop", 1);
             }
         }
+    }
+
+    public void FireChange()
+    {
+        Stop();
+        Flame.gameObject.SetActive(true);
+        Light.gameObject.SetActive(false);
+        Electric.gameObject.SetActive(false);
+    }
+
+    public void LightChange()
+    {
+        Stop();
+        Flame.gameObject.SetActive(false);
+        Light.gameObject.SetActive(true);
+        Electric.gameObject.SetActive(false);
+    }
+
+    public void ElectricChange()
+    {
+        Stop();
+        Flame.gameObject.SetActive(false);
+        Light.gameObject.SetActive(false);
+        Electric.gameObject.SetActive(true);
     }
 }

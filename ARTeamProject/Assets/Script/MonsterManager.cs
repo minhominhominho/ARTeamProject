@@ -10,6 +10,8 @@ using UnityEngine.XR.ARSubsystems;
 public class MonsterManager : MonoBehaviour
 {
     public List <GameObject> Monsters;
+    public List <GameObject> Hearts;
+
     private int i;
     private GameObject spawned;
     private GameObject Flame, Light, Electric;
@@ -44,7 +46,6 @@ public class MonsterManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(waitingTime);
-
             //When there is no monster.
             if (!isSpawned && planeManager.trackables.count > 0)
             {
@@ -65,11 +66,12 @@ public class MonsterManager : MonoBehaviour
                 {
                     spawned = Instantiate(Monsters[i], selectedPlane.transform.position, selectedPlane.transform.rotation);
                     spawned.transform.LookAt(Camera.main.transform.position);
-                    isSpawned = true;
+                    
                     Invoke("StartToRun", 3.5f);
                     SpawnSound[i].Play();
 
                     waitingTime = Random.Range(8.0f, 12.0f);
+                    isSpawned = true;
                 }
             }
         }
@@ -79,7 +81,7 @@ public class MonsterManager : MonoBehaviour
     {
         if (isSpawned && !isHit && isRunning)
         {
-            float step = 0.2f * Time.deltaTime;
+            float step = 0.4f * Time.deltaTime;
             spawned.transform.LookAt(Camera.main.transform.position);
             spawned.transform.position = Vector3.MoveTowards(spawned.transform.position, Camera.main.transform.position, step);
         }
@@ -90,7 +92,12 @@ public class MonsterManager : MonoBehaviour
             Destroy(spawned);
             isSpawned = false;
             isRunning = false;
-            //여기에 하트 깎이는거 추가
+
+            if (GameObject.FindGameObjectsWithTag("Heart") != null)
+            {
+                Destroy(GameObject.FindWithTag("Heart"));
+            }
+
         }
     }
 
@@ -108,43 +115,58 @@ public class MonsterManager : MonoBehaviour
                 Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0.0f));
                 RaycastHit hit;
 
-                if (Physics.Raycast(ray, out hit, 3.0f))
+                if (Physics.Raycast(ray, out hit, 5.0f))
                 {
                     if (hit.collider.tag == "Clown" && hit.collider.enabled == true && Light && Light.activeSelf)
                     {
-                        isHit = true;
-                        hit.collider.enabled = false;
                         animator = hit.transform.GetComponent<Animator>();
-                        animator.SetBool("IsFalling", true);
-                        Destroy(hit.collider.gameObject, 3);
-                        isSpawned = false;
-                        FallingSound[i].Play();
-                        isHit = false;
-                        isRunning = false;
+                        if (animator.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Running"))
+                        {
+                            isHit = true;
+                            hit.collider.enabled = false;
+
+                            animator.SetBool("IsFalling", true);
+                            Destroy(hit.collider.gameObject, 3);
+                            
+                            FallingSound[i].Play();
+                            isHit = false;
+                            isRunning = false;
+                            isSpawned = false;
+                        }
                     }
                     else if (hit.collider.tag == "Parasite" && hit.collider.enabled == true && Electric && Electric.activeSelf)
                     {
-                        isHit = true;
-                        hit.collider.enabled = false;
                         animator = hit.transform.GetComponent<Animator>();
-                        animator.SetBool("IsFalling", true);
-                        Destroy(hit.collider.gameObject, 3);
-                        isSpawned = false;
-                        FallingSound[i].Play();
-                        isHit = false;
-                        isRunning = false;
+                        if (animator.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Running"))
+                        {
+                            isHit = true;
+                            hit.collider.enabled = false;
+
+                            animator.SetBool("IsFalling", true);
+                            Destroy(hit.collider.gameObject, 3);
+                            
+                            FallingSound[i].Play();
+                            isHit = false;
+                            isRunning = false;
+                            isSpawned = false;
+                        }
                     }
                     else if (hit.collider.tag == "Zombie" && hit.collider.enabled == true && Flame && Flame.activeSelf)
                     {
-                        isHit = true;
-                        hit.collider.enabled = false;
                         animator = hit.transform.GetComponent<Animator>();
-                        animator.SetBool("IsFalling", true);
-                        Destroy(hit.collider.gameObject, 3);
-                        isSpawned = false;
-                        FallingSound[i].Play();
-                        isHit = false;
-                        isRunning = false;
+                        if (animator.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Running"))
+                        {
+                            isHit = true;
+                            hit.collider.enabled = false;
+
+                            animator.SetBool("IsFalling", true);
+                            Destroy(hit.collider.gameObject, 3);
+                            
+                            FallingSound[i].Play();
+                            isHit = false;
+                            isRunning = false;
+                            isSpawned = false;
+                        }
                     }
                 }
             }
