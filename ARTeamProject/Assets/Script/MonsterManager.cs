@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
@@ -10,11 +10,11 @@ using UnityEngine.XR.ARSubsystems;
 public class MonsterManager : MonoBehaviour
 {
     public List <GameObject> Monsters;
-    public List <GameObject> Hearts;
 
     private int i;
     private GameObject spawned;
     private GameObject Flame, Light, Electric;
+    public GameObject GameoverScreen;
 
     private ARPlaneManager planeManager;
     private ARPlane selectedPlane;
@@ -27,9 +27,13 @@ public class MonsterManager : MonoBehaviour
     private bool isSpawned = false;
     private bool isRunning = false;
     private bool isHit = false;
+    private bool isPlaying = true;
 
+    private int killCount = 0;
+    private int HurtCount = 0;
 
-    private float waitingTime = 10.0f;
+    public Vector3 monsterPosition;
+
 
     void Start()
     {
@@ -37,7 +41,7 @@ public class MonsterManager : MonoBehaviour
         Flame = GameObject.FindWithTag("Flame");
         Light = GameObject.FindWithTag("Light");
         Electric = GameObject.FindWithTag("Electric");
-
+        GameoverScreen.SetActive(false);
         StartCoroutine(StartGame());
     }
 
@@ -45,9 +49,9 @@ public class MonsterManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(waitingTime);
+            yield return new WaitForSeconds(2.0f);
             //When there is no monster.
-            if (!isSpawned && planeManager.trackables.count > 0)
+            if (!isSpawned && planeManager.trackables.count > 0 && isPlaying)
             {
                 int RandomNum = Random.Range(0, planeManager.trackables.count);
                 int count = 0;
@@ -61,44 +65,79 @@ public class MonsterManager : MonoBehaviour
                     count++;
                 }
 
-                i = Random.Range(0, 3);
-                if (Vector3.Distance(selectedPlane.transform.position, Camera.main.transform.position) >= 1.5f)
+                
+                if (Vector3.Distance(selectedPlane.transform.position, Camera.main.transform.position) >= 2.0f)
                 {
-                    spawned = Instantiate(Monsters[i], selectedPlane.transform.position, selectedPlane.transform.rotation);
-                    spawned.transform.LookAt(Camera.main.transform.position);
-                    
-                    Invoke("StartToRun", 3.5f);
-                    SpawnSound[i].Play();
-
-                    waitingTime = Random.Range(8.0f, 12.0f);
+                    //float addX = Random.Range(-selectedPlane.size.x / 2, selectedPlane.size.x / 2);
+                    //float addZ = Random.Range(-selectedPlane.size.y / 2, selectedPlane.size.y / 2);
+                    //Vector3 monsterPosition = selectedPlane.transform.position + new Vector3(addX, 0, addZ);
+                    monsterPosition = selectedPlane.transform.position;
                     isSpawned = true;
+                    Invoke("SpawnPrefabinCondition", Random.Range(3.0f,5.0f));
+                    Invoke("StartToRun", 3.5f);
                 }
             }
         }
     }
 
+    public void SpawnPrefabinCondition()
+    {
+        i = Random.Range(0, 3);
+        spawned = Instantiate(Monsters[i], monsterPosition, selectedPlane.transform.rotation);
+        spawned.transform.LookAt(Camera.main.transform.position);
+
+        Invoke("StartToRun", 3.5f);
+        SpawnSound[i].Play();
+
+        isSpawned = true;
+    }
+
     void Update()
     {
-        if (isSpawned && !isHit && isRunning)
+        if (isSpawned && !isHit && isRunning && isPlaying)
         {
-            float step = 0.4f * Time.deltaTime;
-            spawned.transform.LookAt(Camera.main.transform.position);
-            spawned.transform.position = Vector3.MoveTowards(spawned.transform.position, Camera.main.transform.position, step);
+            animator = spawned.transform.GetComponent<Animator>();
+            if (animator.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Running"))
+            {
+                float step = 0.4f * Time.deltaTime;
+                spawned.transform.LookAt(Camera.main.transform.position);
+                spawned.transform.position = Vector3.MoveTowards(spawned.transform.position, Camera.main.transform.position, step);
+            }
         }
 
-        if (isSpawned && !isHit && isRunning && Vector3.Distance(spawned.transform.position, Camera.main.transform.position) <= 0.5f)
+        if (isSpawned && !isHit && isRunning && isPlaying && Vector3.Distance(spawned.transform.position, Camera.main.transform.position) <= 0.5f)
         {
             HurtSound.Play();
             Destroy(spawned);
             isSpawned = false;
             isRunning = false;
 
-            if (GameObject.FindGameObjectsWithTag("Heart") != null)
+            if (HurtCount < 3)
             {
+                HurtCount++;
                 Destroy(GameObject.FindWithTag("Heart"));
             }
-
+            
+            if(HurtCount == 3)
+            {
+                Setup(killCount);
+            }    
         }
+    }
+
+    
+
+
+    public void Setup(int score)
+    {
+        Flame.SetActive(false);
+        Light.SetActive(false);
+        Electric.SetActive(false);
+        isPlaying = false;
+        GameoverScreen.SetActive(true);
+        GameObject scoretext = GameObject.FindWithTag("Score");
+        Text pointText = scoretext.GetComponent<Text>();
+        pointText.text = score + " POINTS";
     }
 
     void StartToRun()
@@ -108,7 +147,7 @@ public class MonsterManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isSpawned && !isHit)
+        if (isSpawned && !isHit && isPlaying)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -124,6 +163,7 @@ public class MonsterManager : MonoBehaviour
                         {
                             isHit = true;
                             hit.collider.enabled = false;
+                            killCount++;
 
                             animator.SetBool("IsFalling", true);
                             Destroy(hit.collider.gameObject, 3);
@@ -141,6 +181,7 @@ public class MonsterManager : MonoBehaviour
                         {
                             isHit = true;
                             hit.collider.enabled = false;
+                            killCount++;
 
                             animator.SetBool("IsFalling", true);
                             Destroy(hit.collider.gameObject, 3);
@@ -158,6 +199,7 @@ public class MonsterManager : MonoBehaviour
                         {
                             isHit = true;
                             hit.collider.enabled = false;
+                            killCount++;
 
                             animator.SetBool("IsFalling", true);
                             Destroy(hit.collider.gameObject, 3);

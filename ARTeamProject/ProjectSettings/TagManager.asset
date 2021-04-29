@@ -11,6 +11,7 @@ TagManager:
   - Parasite
   - Clown
   - Heart
+  - Score
   layers:
   - Default
   - TransparentFX
