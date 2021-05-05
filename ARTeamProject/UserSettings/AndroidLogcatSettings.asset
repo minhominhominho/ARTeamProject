@@ -1,9 +1,13 @@
 {
-    "m_SelectedDeviceId": "R39M300B0HB",
+    "m_SelectedDeviceId": "R3CN601NPNE",
     "m_SelectedPackage": {
-        "deviceId": "R39M300B0HB",
+        "deviceId": "R3CN601NPNE",
         "name": "com.DefaultCompany.ARTeamProject",
+<<<<<<< HEAD
         "processId": 21516,
+=======
+        "processId": 29343,
+>>>>>>> 09606fab50d23a81cbe6e9537168a6be849bffdf
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -120,6 +124,12 @@
             "deviceId": "R3CN601NPNE",
             "name": "com.DefaultCompany.ARTeamProject",
             "processId": 31960,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN601NPNE",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 29343,
             "exited": false
         },
         {
