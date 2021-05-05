@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R39M300B0HB",
         "name": "com.DefaultCompany.ARTeamProject",
-        "processId": 13519,
+        "processId": 21516,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -402,6 +402,12 @@
             "deviceId": "R39M300B0HB",
             "name": "com.DefaultCompany.ARTeamProject",
             "processId": 13519,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M300B0HB",
+            "name": "com.DefaultCompany.ARTeamProject",
+            "processId": 21516,
             "exited": false
         },
         {

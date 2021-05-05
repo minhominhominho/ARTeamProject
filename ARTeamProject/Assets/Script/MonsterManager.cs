@@ -68,9 +68,6 @@ public class MonsterManager : MonoBehaviour
                 
                 if (Vector3.Distance(selectedPlane.transform.position, Camera.main.transform.position) >= 2.0f)
                 {
-                    //float addX = Random.Range(-selectedPlane.size.x / 2, selectedPlane.size.x / 2);
-                    //float addZ = Random.Range(-selectedPlane.size.y / 2, selectedPlane.size.y / 2);
-                    //Vector3 monsterPosition = selectedPlane.transform.position + new Vector3(addX, 0, addZ);
                     monsterPosition = selectedPlane.transform.position;
                     isSpawned = true;
                     Invoke("SpawnPrefabinCondition", Random.Range(3.0f,5.0f));
